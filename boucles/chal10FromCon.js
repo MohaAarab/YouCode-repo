@@ -15,7 +15,6 @@ for (let char of date) {
     }
 }
 
-// Ajouter la dernière partie (l'année)
 date_array.push(char_sum)
 
 const jour = date_array[0]
