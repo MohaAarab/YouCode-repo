@@ -2,7 +2,7 @@ const prompt=require('prompt-sync')();
 
 let n=prompt('entrer un mote : ');
 let n1=prompt('entrer un mote : ');
-
+// sort function
 function sort(arr){
     
     let len=arr.length;
@@ -15,9 +15,7 @@ function sort(arr){
                 arr[j+1] = swap;
                 
             }
-
         }
-        
     }
     return arr;
 }
@@ -33,7 +31,6 @@ if(n.length == n1.length){
       arr.push(ascii);
       }
     let res = sort(arr);
-    //console.log(arr);
  
     let arr1=[];
     for(let i=0 ; i<n.length ; i++){
@@ -42,7 +39,6 @@ if(n.length == n1.length){
       }
     let res1= sort(arr1);
 
-    //console.log(arr1);
      let same = true
 
     for(let i = 0; i < res.length; i++) {
@@ -61,3 +57,17 @@ if(n.length == n1.length){
 }else{
     console.log(`this words are not anagramme`);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,13 +11,13 @@ const string=prompt('entrer une chaine de character : ');
 //kayak    4
 
 let i=0;//1 2
-let counter=0//1 2 
+//let counter=0//1 2 
 while(string[i] != undefined){
-    counter++
+    //counter++
     i++;
     
 }
-console.log(counter);
+console.log(i);
 
 
 
