@@ -5,7 +5,7 @@ const n=Number(prompt('entre a number : '))
 
 let a=0 
 let b=1 
-for(i=0 ;i<n ;i++){
+for(let i=0 ;i<n ;i++){
     let fibo=a+b
     a=b
     b=fibo
