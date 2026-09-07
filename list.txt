@@ -1,0 +1,49 @@
+// MAIN MENU
+// │
+// ├── 1. Home
+// │   ├── 1. Welcome
+// │   ├── 2. Introduction
+// │   ├── 3. Highlights
+// │   └── 4. News
+// │
+// ├── 2. About Us
+// │   ├── 1. Our Team
+// │   ├── 2. Our History
+// │   └── 3. Mission & Vision
+// │
+// ├── 3. Contact
+// │   ├── 1. Email
+// │   ├── 2. Phone
+// │   └── 3. Location
+// │
+// ├── 4. Products
+// │   ├── 1. New Arrivals
+// │   │   ├── 1. Product A
+// │   │   ├── 2. Product B
+// │   │   └── 3. Product C
+// │   │
+// │   ├── 2. Best Sellers
+// │   │   ├── 1. Product X
+// │   │   ├── 2. Product Y
+// │   │   └── 3. Product Z
+// │   │
+// │   └── 3. Categories
+// │       ├── 1. Electronics
+// │       ├── 2. Clothing
+// │       └── 3. Accessories
+// │
+// └── 5. Services
+//     ├── 1. Consulting
+//     │   ├── 1. Business Consulting
+//     │   ├── 2. IT Consulting
+//     │   └── 3. Financial Consulting
+//     │
+//     ├── 2. Support
+//     │   ├── 1. Customer Support
+//     │   ├── 2. Technical Support
+//     │   └── 3. FAQ
+//     │
+//     └── 3. Training
+//         ├── 1. Online Courses
+//         ├── 2. Workshops
+//         └── 3. Certifications
