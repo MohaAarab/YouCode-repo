@@ -29,32 +29,32 @@ function products_menu() {
 `);
 }
 
-function New_Arrivals() {
-    console.log(`
-1. Product A
-2. Product B
-3. Product C
-#. Return
-`);
-}
+        function New_Arrivals() {
+            console.log(`
+        1. Product A
+        2. Product B
+        3. Product C
+        #. Return
+        `);
+        }
 
-function Best_Sellers() {
-    console.log(`
-1. Product X
-2. Product Y
-3. Product Z
-#. Return
-`);
-}
+        function Best_Sellers() {
+            console.log(`
+        1. Product X
+        2. Product Y
+        3. Product Z
+        #. Return
+        `);
+        }
 
-function Categories() {
-    console.log(`
-1. Electronics
-2. Clothing
-3. Accessories
-#. Return
-`);
-}
+        function Categories() {
+            console.log(`
+        1. Electronics
+        2. Clothing
+        3. Accessories
+        #. Return
+        `);
+        }
 
 function services_menu() {
     console.log(`
@@ -75,7 +75,7 @@ do {
         case '1': {
             let homeChoice = '';
 
-            do {
+        do {
                 home_menu();
                 homeChoice = prompt('Enter your choice: ');
 
@@ -104,7 +104,7 @@ do {
                         console.log('Invalid input');
                 }
 
-            } while (homeChoice !== '#');
+        } while (homeChoice !== '#');
 
             break;
         }
@@ -112,7 +112,7 @@ do {
         case '2': {
             let prod_menu = '';
 
-            do {
+        do {
                 products_menu();
                 prod_menu = prompt('Enter your choice: ');
 
@@ -138,33 +138,28 @@ do {
                         console.log('Invalid input');
                 }
 
-            } while (prod_menu !== '#');
+        } while (prod_menu !== '#');
 
             break;
         }
-    case 3:{
+    case '3':{
         let serviceChoice='';
-            do {
+        do {
                 services_menu();
                 serviceChoice = prompt('Enter your choice: ');
 
                 switch (serviceChoice) {
                     case '1':
-                        console.log('Welcome!');
+                        console.log('Consulting');
                         break;
 
                     case '2':
-                        console.log('Introduction');
+                        console.log('Clothing');
                         break;
 
                     case '3':
-                        console.log('Highlights');
+                        console.log('Accessories');
                         break;
-
-                    case '4':
-                        console.log('News');
-                        break;
-
                     case '#':
                         console.log('Returning to main menu...');
                         break;
@@ -173,7 +168,7 @@ do {
                         console.log('Invalid input');
                 }
 
-            } while (serviceChoice !== '#');
+        } while (serviceChoice !== '#');
 
             break;
         }
