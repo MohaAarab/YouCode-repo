@@ -14,7 +14,7 @@ function menu(){
          3. Search for a book by its title. 
          4. Update the quantity of a book. 
          5. Remove a book from stock. 
-         6. Show the total number of books in stock.`)
+         6. Show the total number of books in stock.`);
 };
 function add(){
     let Title=prompt(`enter the title of the book : `);
@@ -24,7 +24,7 @@ function add(){
     const book={ Title : Title , Author : Author , Price : Price , Quantity : Quantity };
     books.push(book);
     //books[books.length] = book;
-    console.log(books);
+    //console.log(books);
 };
 
 function show(){
@@ -39,8 +39,9 @@ function qua_update(){
         if(books[i].title == title){
             let quantity=prompt(`the quantity of the book : `);
             books[i].quantity = quantity;
+            break;
         }else{
-            console.log(`this book is not in the bookstore`)
+            console.log(`this book is not in the bookstore`);
         }
     }
 };
@@ -56,26 +57,26 @@ function Search(){
         }
     }
     if(con == false){
-    console.log(`this book is not in the bookstore`) 
-    }}
+    console.log(`this book is not in the bookstore`) ;
+    }};
 
 function total(){
     let total=0;
     for(let i=0 ; i<books.length ; i++){
         total+=books[i].quantity;
     }
-    console.log(`the total of the book in the bookstore is : ${total}`)
+    console.log(`the total of the book in the bookstore is : ${total}`);
 };
 function Remove(){
     let title=prompt(`the title of the book to update : `);
-    let arr=[]
+    let arr=[];
     for(let i=0 ; i<books.length ; i++){
             if(books[i].title !== title){
                 arr.push(books[i]);
             }
         }
-        console.log(arr)
-    }
+        return true;
+};
     
 
 menu();
@@ -99,4 +100,6 @@ let choice=prompt(`enter your choice : `);
         case '6':
             total();
             break;
-    }
+        default:
+            console.log(`this is not a valid input`);
+};

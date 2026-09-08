@@ -157,7 +157,6 @@ do {
                 }
 
         } while (serviceChoice !== '#');
-
             break;
         }
     }
