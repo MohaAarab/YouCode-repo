@@ -23,7 +23,7 @@ function add(){
     let Quantity=Number(prompt(`enter the quantity of the book : `));
     const book={ Title : Title , Author : Author , Price : Price , Quantity : Quantity };
     books.push(book);
-    //books[books.length] = book
+    //books[books.length] = book;
     console.log(books);
 };
 
@@ -65,7 +65,19 @@ function total(){
         total+=books[i].quantity;
     }
     console.log(`the total of the book in the bookstore is : ${total}`)
-}
+};
+function Remove(){
+    let title=prompt(`the title of the book to update : `);
+    let arr=[]
+    for(let i=0 ; i<books.length ; i++){
+            if(books[i].title !== title){
+                arr.push(books[i]);
+            }
+        }
+        console.log(arr)
+    }
+    
+
 menu();
 let choice=prompt(`enter your choice : `);
     switch(choice){
@@ -82,6 +94,7 @@ let choice=prompt(`enter your choice : `);
             qua_update();
             break;
         case '5':
+            Remove();
             break;
         case '6':
             total();
