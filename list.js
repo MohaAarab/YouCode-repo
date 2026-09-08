@@ -83,23 +83,18 @@ do {
                     case '1':
                         console.log('Welcome!');
                         break;
-
                     case '2':
                         console.log('Introduction');
                         break;
-
                     case '3':
                         console.log('Highlights');
                         break;
-
                     case '4':
                         console.log('News');
                         break;
-
                     case '#':
                         console.log('Returning to main menu...');
                         break;
-
                     default:
                         console.log('Invalid input');
                 }
@@ -121,19 +116,15 @@ do {
                     case '1':
                         New_Arrivals();
                         break;
-
                     case '2':
                         Best_Sellers();
                         break;
-
                     case '3':
                         Categories();
                         break;
-
                     case '#':
                         console.log('Returning to main menu...');
                         break;
-
                     default:
                         console.log('Invalid input');
                 }
@@ -152,18 +143,15 @@ do {
                     case '1':
                         console.log('Consulting');
                         break;
-
                     case '2':
                         console.log('Clothing');
                         break;
-
                     case '3':
                         console.log('Accessories');
                         break;
                     case '#':
                         console.log('Returning to main menu...');
                         break;
-
                     default:
                         console.log('Invalid input');
                 }

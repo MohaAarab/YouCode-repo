@@ -1,181 +1,109 @@
 const prompt=require('prompt-sync')()
 
-function menu_princ() {
-    console.log(`
-######## MENU ########
-1. Home
-2. Products
-3. Services
-#. Exit
-`);
+const menu = {
+    home : {
+        welcome : "Welcome",
+        aboutUs : "About-us",
+        contact : "Contact",
+    },
+
+    products : {
+        newArrivals : "new Arrivals",
+        bestSellers : "Best Sellers",
+        categories : "Categories",
+    },
+
+    services : {
+        consulting : "Consulting",
+        support : "Support",
+        faq : "FAQ",
+    },
+};
+
+function menuSaisi(){
+    console.log((`    Menu    
+    1-Home 
+    2-Products
+    3-Services 
+    `));
 }
 
-function home_menu() {
-    console.log(`
-1. Welcome
-2. Introduction
-3. Highlights
-4. News
-#. Return
-`);
+function homeMenu(){
+    console.log((`    Home    
+        1-Welcome 
+        2-About-us
+        3-Contact 
+        #-Back
+        `));
 }
 
-function products_menu() {
-    console.log(`
-1. New Arrivals
-2. Best Sellers
-3. Categories
-#. Return
-`);
+function produitsMenu(){
+    console.log((`    Products    
+        1-New arrivals 
+        2-Best sellers
+        3-Categories 
+        #-Back
+    `));
 }
 
-function New_Arrivals() {
-    console.log(`
-1. Product A
-2. Product B
-3. Product C
-#. Return
-`);
+function servicesMenu(){
+    console.log((`    Products    
+        1-Consulting
+        2-Support
+        3-FAQ
+        #-Back
+    `));
 }
 
-function Best_Sellers() {
-    console.log(`
-1. Product X
-2. Product Y
-3. Product Z
-#. Return
-`);
-}
+let choix = 0;
+do{
 
-function Categories() {
-    console.log(`
-1. Electronics
-2. Clothing
-3. Accessories
-#. Return
-`);
-}
-
-function services_menu() {
-    console.log(`
-1. Consulting
-2. Support
-3. Training
-#. Return
-`);
-}
-
-let mainMenu = '';
-
-do {
-    menu_princ();
-    mainMenu = prompt('Enter your choice: ');
-
-    switch (mainMenu) {
-        case '1': {
-            let homeChoice = '';
-
-        do {
-                home_menu();
-                homeChoice = prompt('Enter your choice: ');
-
-                switch (homeChoice) {
-                    case '1':
-                        console.log('Welcome!');
-                        break;
-
-                    case '2':
-                        console.log('Introduction');
-                        break;
-
-                    case '3':
-                        console.log('Highlights');
-                        break;
-
-                    case '4':
-                        console.log('News');
-                        break;
-
-                    case '#':
-                        console.log('Returning to main menu...');
-                        break;
-
-                    default:
-                        console.log('Invalid input');
-                }
-
-        } while (homeChoice !== '#');
-
-            break;
-        }
-
-        case '2': {
-            let prod_menu = '';
-
-        do {
-                products_menu();
-                prod_menu = prompt('Enter your choice: ');
-
-                switch (prod_menu) {
-
-                    case '1':
-                        New_Arrivals();
-                        break;
-
-                    case '2':
-                        Best_Sellers();
-                        break;
-
-                    case '3':
-                        Categories();
-                        break;
-
-                    case '#':
-                        console.log('Returning to main menu...');
-                        break;
-
-                    default:
-                        console.log('Invalid input');
-                }
-
-        } while (prod_menu !== '#');
-
-            break;
-        }
-    case 3:{
-        let serviceChoice='';
-        do {
-                services_menu();
-                serviceChoice = prompt('Enter your choice: ');
-
-                switch (serviceChoice) {
-                    case '1':
-                        console.log('Welcome!');
-                        break;
-
-                    case '2':
-                        console.log('Introduction');
-                        break;
-
-                    case '3':
-                        console.log('Highlights');
-                        break;
-
-                    case '4':
-                        console.log('News');
-                        break;
-
-                    case '#':
-                        console.log('Returning to main menu...');
-                        break;
-
-                    default:
-                        console.log('Invalid input');
-                }
-
-        } while (serviceChoice !== '#');
-
-            break;
-        }
-    }
-}while(mainMenu !== '#')
+    switch(choix){
+        case 0 :
+                menuSaisi();
+                choix = Number(prompt(`Saisir votre choix :`));
+                break;
+        case 1 :
+            homeMenu();
+            let home =prompt();
+            switch(home){
+                case '1' : console.log(menu.home.welcome);
+                break;
+                case '2' : console.log(menu.home.aboutUs);
+                break;
+                case '3' : console.log(menu.home.contact);
+                break;
+                case '#' : choix = 0;
+                break;
+            };
+        break;
+        case 2 :
+            produitsMenu();
+            let produits =prompt();
+            switch(produits){
+                case '1' : console.log(menu.products.newArrivals);
+                break;
+                case '2' : console.log(menu.products.bestSellers);
+                break;
+                case '3' : console.log(menu.products.categories);
+                break;
+                case '#' : choix = 0;
+                break;
+            };
+        break;
+        case 3 : 
+            servicesMenu();
+            let services =prompt();
+            switch(services){
+                case '1' : console.log(menu.services.consulting);
+                break;
+                case '2' : console.log(menu.services.support);
+                break;
+                case '3' : console.log(menu.services.faq);
+                break;
+                case '#' : choix = 0;
+                break;
+            };
+        break;
+    };
+}while(choix !== 4);
